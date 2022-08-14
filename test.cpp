@@ -1,42 +1,39 @@
-//Queue by Linked List
+//Circular Linked List
 
 #include<iostream>
-#include<stdlib.h>
 using namespace std;
 
-//Node structure
-struct Node                               //B_Code 12jan22
+struct Node                                   //B's code 24jan22
 {
   int data;
-  struct Node* link;
+  struct Node *link;
+}*p,*start,*temp;
 
-}*front,*rear,*p,*temp;
-
-//Function Declaration
 void insert(int x);
-void pop();
+void display();
 void search(int x);
 void count();
-void display();
+void delfirst();
+void dellast();
 
 //Main
 int main()
 {
   int ch,n;
-  front = NULL;   //Initialising front and rear to NULL
-  rear = NULL;
   
 
   do
   {
     
     //Choices
-    printf("\n\n\t\tEnter your choice: ");
-    printf("\n\n\t\tPress 1 to insert ");
-    printf("\n\n\t\tPress 2 to delete");
-    printf("\n\n\t\tPress 3 to search");
-    printf("\n\n\t\tPress 4 to count");
-    printf("\n\n\t\tPress 5 to display\n\n");
+    printf("\n\nEnter your choice: \n");
+    printf("\nPress 1 to insert \n");
+    printf("Press 2 to display\n");
+    printf("Press 3 to search\n");
+    printf("Press 4 to count\n");
+    printf("Press 5 to delfirst\n");
+    printf("Press 6 to dellast\n");
+
     scanf("%d",&ch);
 
     switch(ch)
@@ -47,22 +44,22 @@ int main()
 	      insert(n);
 	      break;
 
-      //Deletion
-      case 2: pop();
+      //Deletion from first
+      case 2: display();
 	      break;
 
-      //Element search operation
-      case 3: printf("Enter the vlaue to be search\n");
+      case 3: printf("Enter the value to search in the list\n");
 	      scanf("%d",&n);
 	      search(n);
 	      break;
 
-      //Counting of elements in queue
       case 4: count();
 	      break;
 
-      //Display of all elements in queue
-      case 5: display();
+      case 5: delfirst();
+	      break;
+
+      case 6: dellast();
 	      break;
 
       default: printf("\nInvalid choice");
@@ -74,123 +71,140 @@ int main()
 
   return 0;
 }
- //Insert Fuction
+ //Insert function
  void insert(int x)
- {
-    if(rear==NULL)
-    {
-      rear = (struct Node*)malloc(sizeof(struct Node));
-      rear->data = x;
-      rear->link = NULL;
-      front = rear;
-    }
-    else
-    {
-      temp = (struct Node*)malloc(sizeof(struct Node));
-      temp->data = x;
-      temp->link = NULL;
-      rear->link = temp;
-      rear = temp;
-    }
-    printf("Element inserted...");
- }
- //Delete function
- void pop()
- {
-   if(front==NULL)
-     printf("No list is present!!!");
-
-   /*else if(front==rear&&rear!=NULL)    //when front and rear both pointing
-   {                                   //same node and we have to delete
-     temp = front;                     //that node
-     free(temp);
-     front=NULL;
-     rear=NULL;
-     printf("\nNode is delted...\n");
-   }*/
-
-   else if(front->link==NULL)
-   {                                   
-     free(front);
-     front=NULL;
-     rear=NULL;
-     printf("\nNode is delted...\n");
-   }
-
-   else
-   {
-     temp = front;
-     front = front->link;
-     free(temp);
-     printf("\nNode is delted...\n");
-   }
- }
- //Search function
- void search(int x)
- {
-   int flag = 0 ;
-
-   if(front==NULL)
-    {
-      printf("No list is present!!!");
-    }
-   else
-   {
-     p = front;
-
-     while(p!=NULL)
-     {
-       if(p->data == x)
-       {
-
-	flag++;
-	printf("%dtest",flag);
-       }
-
-       p=p->link;
-     }
-   }
-
-    if(flag)
-     printf("\nElements found %d number of times", flag);
-    else
-     printf("\nElement not found\n");
- }
- //Count function
- void count()
- {
-  int c = 0;
-
-  if(front==NULL)
-    printf("No list present");
-
-  else
   {
-    p = front;
-
-    while(p!=NULL)
+    if(start==NULL)
     {
-      c++;
-      p = p->link;
+      start = (struct Node*)malloc(sizeof(struct Node));
+      start->data = x;
+      start->link = start;
     }
-    printf("%d elements are in queue", c);
+    else
+    {
+      p = start;
+
+      while(p->link!=start)
+      {
+       p = p->link;
+      }
+      temp = (struct Node*)malloc(sizeof(struct Node));
+      p->link = temp;
+      temp->data = x;
+      temp->link = start;
+    }
+    printf("\nNode inserted\n");
   }
- }
  //Display function
  void display()
- {
-   if(front==NULL)
-    printf("No list present");
+  {
+   if(start==NULL)
+    printf("\nNo list present\n");
 
    else
    {
-     p = front;
+     p = start;
 
-     printf("Elements are : ");
-     while(p!=NULL)
+     printf("\nElements are %d ",p->data);
+     p = p->link;
+
+     while(p!=start)
      {
-       printf(" %d\t",p->data);
+       printf("%d ",p->data);
        p = p->link;
      }
    }
+ }
+ void search(int x)
+ {
+   int flag = 0;
+
+   if(start==NULL)
+    printf("\nNo list present\n");
+   else
+   {
+     p = start;
+
+     if(p->data==x)
+       flag++;
+     p = p->link;
+
+     while(p!=start)
+     {
+       if(p->data==x)
+	 flag++;
+       p = p->link;
+     }
+   }
+   printf("Element present %d number of times.. " , flag);
+ }
+ void count()
+ {
+   int c = 0;
+
+   if(start==NULL)
+    printf("\nNo list present\n");
+   else
+   {
+     p=start;
+     c++;
+     p=p->link;
+
+     while(p!=start)
+     {
+	c++;
+	p = p->link;
+     }
+     printf("%d Element are in list",c);
+   }
+ }
+ void dellast()
+ {
+   if(start==NULL)
+     printf("\nNo list is present\n");
+
+   else if(start->link==start)
+   {
+     free(start);
+     start = NULL;
+     printf("\nNode is deleted\n");
+   }
+
+   else
+   {
+     p=start;
+
+     while(p->link->link!=start)
+	 p=p->link;
+
+     temp = p->link;
+     free(temp);
+     p->link = start;
+     printf("\nNode is deleted\n");
+   }
+ }
+ void delfirst()
+ {
+    if(start==NULL)
+     printf("\nNo list is present\n");
+
+    else if(start->link==start)
+    {
+      free(start);
+      start=NULL;
+      printf("\nNode is deleted\n");
+    }
+
+    else
+    {
+      p = start;
+      while(p->link!=start)
+	 p=p->link;
+
+      temp = start;
+      start = start->link;
+      p->link = start;
+      free(temp);
+      printf("\nNode is deleted\n");
+    }
  }
