@@ -183,7 +183,7 @@ int main()
      printf("\nNode is deleted\n");
    }
  }
- //v
+ //vi
  void delfirst()
  {
     if(start==NULL)
