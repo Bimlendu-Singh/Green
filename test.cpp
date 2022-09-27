@@ -183,7 +183,7 @@ int main()
      printf("\nNode is deleted\n");
    }
  }
- //vis
+ //visu
  void delfirst()
  {
     if(start==NULL)
