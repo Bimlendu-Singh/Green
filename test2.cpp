@@ -118,7 +118,7 @@ void main()
    else
     printf("\nInsertion not possible from front this time\n");
  }
- //Del function
+ //Delet function
  void delFront()
  {
    if(q.rear==-1)
