@@ -96,7 +96,7 @@ int main()
     printf("\nNode inserted\n");
   }
  //Display function
- void display()
+ void di()
   {
    if(start==NULL)
     printf("\nNo list present\n");
