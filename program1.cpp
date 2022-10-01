@@ -52,3 +52,5 @@ void main()
      for(j=0;j<3;j++)
       printf(" %d ", Z[i][j]);
    }
+   getch();
+}
