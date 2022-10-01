@@ -36,3 +36,11 @@ void main()
      for(j=0;j<3;j++)
       printf(" %d ", Y[i][j]);
    }
+ //Loop and logic for multiplying two matrix
+ for(i=0;i<3;i++)          
+  for(j=0;j<3;j++)
+   {
+    Z[i][j]=0;
+     for(k=0;k<3;k++)
+      Z[i][j]=X[i][k]*Y[k][j]+Z[i][j];
+   }
