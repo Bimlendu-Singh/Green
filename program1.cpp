@@ -21,3 +21,18 @@ void main()
      for(j=0;j<3;j++)
       printf(" %d ", X[i][j]);
    }
+
+   //Input in Matrix Y
+ printf("\n\n Enter 9 elements in matrix Y \n");
+  for(i=0;i<3;i++)
+   for(j=0;j<3;j++)
+    scanf("%d",&Y[i][j]);
+
+ //Displaying matrix Y
+ printf("\n Matrix Y is \n");    
+  for(i=0;i<3;i++)
+   {
+    printf("\n\n");
+     for(j=0;j<3;j++)
+      printf(" %d ", Y[i][j]);
+   }
