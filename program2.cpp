@@ -136,3 +136,43 @@ void main()
      }
    }
  }
+
+ //Function for delete from last
+ void dellast()
+ {
+   if(start==NULL)
+     printf("\nNo list is present\n");
+
+   else if(start->link==start)
+   {
+     free(start);
+     start = NULL;
+     printf("\nNode is deleted\n");
+   }
+
+   else
+   {
+     p=start;
+
+     while(p->link->link!=start)
+	    p=p->link;
+
+     temp = p->link;
+     free(temp);
+     p->link = start;
+     printf("\nNode is deleted\n");
+   }
+ }
+
+ //Function to delete from first
+ void delfirst()
+ {
+    if(start==NULL)
+     printf("\nNo list is present\n");
+
+    else if(start->link==start)
+    {
+      free(start);
+      start=NULL;
+      printf("\nNode is deleted\n");
+    }
