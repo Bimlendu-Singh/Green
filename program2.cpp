@@ -95,3 +95,23 @@ void main()
     }
     printf("\nNode inserted\n");
   }
+  //Display function
+ void display()
+  {
+   if(start==NULL)
+    printf("\nNo list present\n");
+
+   else
+   {
+     p = start;
+
+     printf("\nElements are %d ",p->data);
+     p = p->link;
+
+     while(p!=start)
+     {
+       printf("%d ",p->data);
+       p = p->link;
+     }
+   }
+ }
