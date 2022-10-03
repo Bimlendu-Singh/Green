@@ -140,3 +140,51 @@ void main()
    }
    printf("Element present %d number of times.. " , flag);
  }
+ //Count function
+ void count()
+ {
+   int c = 0;
+
+   if(start==NULL)
+    printf("\nNo list present\n");
+   else
+   {
+     p=start;
+     c++;
+     p=p->link;
+
+     while(p!=start)
+     {
+	    c++;
+	    p = p->link;
+     }
+     printf("%d Element are in list",c);
+   }
+ }
+
+ //Function for delete from last
+ void dellast()
+ {
+   if(start==NULL)
+     printf("\nNo list is present\n");
+
+   else if(start->link==start)
+   {
+     free(start);
+     start = NULL;
+     printf("\nNode is deleted\n");
+   }
+
+   else
+   {
+     p=start;
+
+     while(p->link->link!=start)
+	    p=p->link;
+
+     temp = p->link;
+     free(temp);
+     p->link = start;
+     printf("\nNode is deleted\n");
+   }
+ }
