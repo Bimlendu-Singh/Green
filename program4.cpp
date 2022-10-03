@@ -188,3 +188,29 @@ void main()
      printf("\nNode is deleted\n");
    }
  }
+//Function to delete from first
+ void delfirst()
+ {
+    if(start==NULL)
+     printf("\nNo list is present\n");
+
+    else if(start->link==start)
+    {
+      free(start);
+      start=NULL;
+      printf("\nNode is deleted\n");
+    }
+
+    else
+    {
+      p = start;
+      while(p->link!=start)
+	    p=p->link;
+
+      temp = start;
+      start = start->link;
+      p->link = start;
+      free(temp);
+      printf("\nNode is deleted\n");
+    }
+ }
