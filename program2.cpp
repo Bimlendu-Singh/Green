@@ -137,3 +137,27 @@ void main()
     else
        printf("\nElement Not Found");
  }
+
+ //Function for counting all element
+ void count()
+ {
+   int c = 0;
+
+   if(start==NULL)
+    {
+       count<<"No list present!";
+    }
+    else
+    {
+     p = start;
+
+      while(p!=NULL)
+       {
+	       c++;
+	       p = p->link;
+       }
+
+       printf("\nThe total no. of elements in the list is %d", c);
+    }
+    
+ }
