@@ -112,3 +112,28 @@ void main()
       p->link=NULL;
    }
  }
+//Function for searching an element
+ void search(int x)
+ {
+   int flag = 0;
+
+   if(start==NULL)
+    {
+      printf("No list present...");
+    }
+   else
+    {
+      p = start;
+      while(p!=NULL)
+      {
+	      if(p->data==x)
+	      flag++;
+
+	      p = p->link;
+      }
+    }
+    if(flag)
+       printf("\nElement found %d number of times",flag);
+    else
+       printf("\nElement Not Found");
+ }
