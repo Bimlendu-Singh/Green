@@ -161,3 +161,20 @@ void main()
     }
     
  }
+ //Function for displaying element
+ void display()
+ {
+   if(start==NULL)
+    {
+      printf("No list present!!!");
+    }
+    else
+    {
+      p = start;
+      while(p!=NULL)
+       {
+	       printf("%d\n",p->data);
+	       p = p->link;
+       }
+    }
+ }
