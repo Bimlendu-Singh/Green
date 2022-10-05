@@ -50,3 +50,17 @@ void main()
 
  cout<<" \n Enter the element to be search \n"; //
  cin>>x;
+//Displaying elements after sorting 
+ cout<<"\n Entered elements in sorted form are \n";
+   for(i=0;i<10;i++)                               
+    cout<<"  "<<arr[i];
+
+ cout<<" \n Enter the element to be search \n"; //
+ cin>>x;
+//Displaying elements after sorting 
+ cout<<"\n Entered elements in sorted form are \n";
+   for(i=0;i<10;i++)                               
+    cout<<"  "<<arr[i];
+
+ cout<<" \n Enter the element to be search \n"; //
+ cin>>x;
