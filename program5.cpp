@@ -50,3 +50,10 @@ void main()
    else
 	 lower=mid+1;
   }
+  //Displying the element found at which position
+ if(flag)
+  cout<<"\n Element found at position "<<mid;  
+ else                                                   
+  cout<<"\n Element not found";
+ getch();
+}
