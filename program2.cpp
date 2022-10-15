@@ -1,93 +1,53 @@
-//Circular Linked List
+//9. Write a program to calculate LCM of two numbers
 
 #include<stdio.h>
-#include<conio.h>
-#include<alloc.h>
 
-struct Node                                   
+int main()
 {
-  int data;
-  struct Node *link;
-}*p,*start,*temp;
+    int a,b,i,j,d,lcm=1,x,y,count;
 
-//Declaring function
-void insert(int x);
-void display();
-void search(int x);
-void count();
-void delfirst();
-void dellast();
+    printf("\nEnter two number to find their LCM : ");
+    scanf("%d",&a);
+    scanf("%d",&b);
 
-//Circular Linked List
+    //Assigning the 'a' and 'b' in 'x' and 'y' so we don't loose original value of 'a' and 'b in the further LCM process
+    x=a;
+    y=b;
 
-#include<stdio.h>
-#include<conio.h>
-#include<alloc.h>
-
-struct Node                                   
-{
-  int data;
-  struct Node *link;
-}*p,*start,*temp;
-
-//Declaring function
-void insert(int x);
-void display();
-void search(int x);
-void count();
-void delfirst();
-void dellast();
-
-//Function for delete from last
- void dellast()
- {
-   if(start==NULL)
-     printf("\nNo list is present\n");
-
-   else if(start->link==start)
-   {
-     free(start);
-     start = NULL;
-     printf("\nNode is deleted\n");
-   }
-
-   else
-   {
-     p=start;
-
-     while(p->link->link!=start)
-	    p=p->link;
-
-     temp = p->link;
-     free(temp);
-     p->link = start;
-     printf("\nNode is deleted\n");
-   }
- }
-
- //Function to delete from first
- void delfirst()
- {
-    if(start==NULL)
-     printf("\nNo list is present\n");
-
-    else if(start->link==start)
-    {
-      free(start);
-      start=NULL;
-      printf("\nNode is deleted\n");
-    }
-
+    if(a>b)
+     d=b;
     else
-    {
-      p = start;
-      while(p->link!=start)
-	    p=p->link;
+     d=a;
 
-      temp = start;
-      start = start->link;
-      p->link = start;
-      free(temp);
-      printf("\nNode is deleted\n");
+    for(i=2;i<=d;)
+    {
+        count = 0;
+        i = 2;
+        for(j=2;j<=i/2;j++)
+        {
+          if(i%j==0)
+          {
+            count++;
+            i++;
+            break;
+          }
+        }
+        if(count==0)
+        {
+            if((a%i==0)&&(b%i==0))
+            {
+                lcm = lcm*i;
+                a = a/i;
+                b = b/i;
+                d=a;               
+            }
+            else
+              i++;
+        }
     }
- }
+    lcm = (lcm*a)*b;
+
+    printf("\nLCM of %d and %d is : %d ", x,y,lcm);
+
+    return 0;
+}
