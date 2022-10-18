@@ -15,3 +15,21 @@ void main()
  cout<<"\n Entered elements in unsorted form \n"; 
    for(i=0;i<10;i++)                              
    cout<<"  "<<arr[i];
+
+ //loop for sorting the elements in ascending order
+  for(i=0;i<9;i++)    
+   {
+    for(j=0;j<9-i;j++)
+     {
+      if(arr[j]>arr[j+1])
+       {
+	      temp=arr[j];
+	      arr[j]=arr[j+1];
+	      arr[j+1]=temp;
+       }
+     }
+   }
+ //Displaying elements after sorting 
+ cout<<"\n Entered elements in sorted form are \n";
+   for(i=0;i<10;i++)                               
+    cout<<"  "<<arr[i];
