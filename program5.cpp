@@ -18,3 +18,77 @@ void pop();
 void search(int x);
 void count();
 void display();
+
+//Main
+void main()
+{
+  int ch,n;
+  front = NULL;   //Initialising front and rear to NULL
+  rear = NULL;
+  clrscr();
+
+  do
+  {
+    clrscr();
+    //Choices
+    printf("\n\n\t\tEnter your choice: ");
+    printf("\n\n\t\tPress 1 to insert ");
+    printf("\n\n\t\tPress 2 to delete");
+    printf("\n\n\t\tPress 3 to search");
+    printf("\n\n\t\tPress 4 to count");
+    printf("\n\n\t\tPress 5 to display\n\n");
+    scanf("%d",&ch);
+
+    switch(ch)
+    {
+      //Insertion Choice
+      case 1: printf("Enter the value to insert\n");
+	      scanf("%d",&n);
+	      insert(n);
+	      break;
+
+      //Deletion
+      case 2: pop();
+	      break;
+
+      //Element search operation
+      case 3: printf("Enter the vlaue to be search\n");
+	      scanf("%d",&n);
+	      search(n);
+	      break;
+
+      //Counting of elements in queue
+      case 4: count();
+	      break;
+
+      //Display of all elements in queue
+      case 5: display();
+	      break;
+
+      default: printf("\nInvalid choice");
+    }
+    printf("\nPress 0 to continue...");
+    scanf("%d",&ch);
+
+  }while(ch==0);
+}
+ //Insert Function
+ void insert(int x)
+ {
+    if(rear==NULL)
+    {
+      rear = (struct Node*)malloc(sizeof(struct Node));
+      rear->data = x;
+      rear->link = NULL;
+      front = rear;
+    }
+    else
+    {
+      temp = (struct Node*)malloc(sizeof(struct Node));
+      temp->data = x;
+      temp->link = NULL;
+      rear->link = temp;
+      rear = temp;
+    }
+    printf("Element inserted...");
+ }
