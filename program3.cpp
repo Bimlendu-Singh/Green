@@ -72,3 +72,24 @@ void main()
 
   }while(ch==0);
 }
+
+//Insert Function
+ void insert(int x)
+ {
+    if(rear==NULL)
+    {
+      rear = (struct Node*)malloc(sizeof(struct Node));
+      rear->data = x;
+      rear->link = NULL;
+      front = rear;
+    }
+    else
+    {
+      temp = (struct Node*)malloc(sizeof(struct Node));
+      temp->data = x;
+      temp->link = NULL;
+      rear->link = temp;
+      rear = temp;
+    }
+    printf("Element inserted...");
+ }
