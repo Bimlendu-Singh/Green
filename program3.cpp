@@ -36,3 +36,33 @@ void main()
    printf("\n\n\t\tPress 4 to count");
    printf("\n\n\t\tPress 5 to display");
    scanf("%d",&ch);
+
+   switch(ch)
+   {
+     case 1: printf("\n Enter the value to insert");
+	           scanf("%d",&n);
+	           insert(n);
+	           break;
+
+     case 2: pop();
+	     break;
+
+     case 3: printf("Enter value to be search ");
+	     scanf("%d",&n);
+	     search(n);
+	     break;
+
+     case 4: count();
+	     break;
+
+     case 5: display();
+	     break;
+
+     default: printf("\nInvalid choice");
+
+   }
+   printf("\nPress 0 to continue...");
+   scanf("%d",&ch);
+
+  }while(ch==0);
+}
