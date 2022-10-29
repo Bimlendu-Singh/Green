@@ -3,7 +3,7 @@
 	      
 void main()                                       
 {
- int arr[10],i,j,flag=0,mid,lower=0,upper=9,x,temp;  //Declaring and initializing variables
+ int arr[10],i,j,flag=0,mid,lower=0,upper=9,x,temp;  //Here, Declaring and initializing variables
  clrscr();   
 
  //Input                              
