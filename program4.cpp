@@ -72,3 +72,115 @@ void main()
 
   }while(ch==0);
 }
+
+//Insert Function
+ void insert(int x)
+ {
+    if(rear==NULL)
+    {
+      rear = (struct Node*)malloc(sizeof(struct Node));
+      rear->data = x;
+      rear->link = NULL;
+      front = rear;
+    }
+    else
+    {
+      temp = (struct Node*)malloc(sizeof(struct Node));
+      temp->data = x;
+      temp->link = NULL;
+      rear->link = temp;
+      rear = temp;
+    }
+    printf("Element inserted...");
+ }
+ //Delete function
+ void pop()
+ {
+   if(front==NULL)
+     printf("No list is present!!!");
+
+   else if(front==rear&&rear!=NULL)    //when front and rear both pointing
+   {                                   //same node and we have to delete
+     temp = front;                     //that node
+     free(temp);
+     front=NULL;
+     rear=NULL;
+     printf("\nNode is delted...\n");
+   }
+   else
+   {
+     temp = front;
+     front = front->link;
+     free(temp);
+     printf("\nNode is delted...\n");
+   }
+ }
+ //Search function
+ void search(int x)
+ {
+   int flag = 0 ;
+
+   if(front==NULL)
+    {
+      printf("No list is present!!!");
+    }
+   else
+   {
+     p = front;
+
+     while(p!=NULL)
+     {
+       if(p->data == x)
+       {
+
+	       flag++;
+	       printf("%dtest",flag);
+       }
+
+       p=p->link;
+     }
+   }
+
+    if(flag)
+     printf("\nElements found %d number of times", flag);
+    else
+     printf("\nElement not found\n");
+ }
+ //Count function
+ void count()
+ {
+  int c = 0;
+
+  if(front==NULL)
+    printf("No list present");
+
+  else
+  {
+    p = front;
+
+    while(p!=NULL)
+    {
+      c++;
+      p = p->link;
+    }
+    printf("%d elements are in queue", c);
+  }
+ }
+ //Display function
+ void display()
+ {
+   if(front==NULL)
+    printf("No list present");
+
+   else
+   {
+     p = front;
+
+     printf("Elements are : ");
+     while(p!=NULL)
+     {
+       printf(" %d\t",p->data);
+       p = p->link;
+     }
+   }
+ }
