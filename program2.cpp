@@ -29,3 +29,25 @@ void main()
        }
      }
    }
+
+   //Displaying elements after sorting 
+ cout<<"\n Entered elements in sorted form are \n";
+   for(i=0;i<10;i++)                               
+    cout<<"  "<<arr[i];
+
+ cout<<" \n Enter the element to be search \n"; //
+ cin>>x;
+
+ //Loop for binary search
+ for(mid=(lower+upper)/2;lower<=upper;mid=(lower+upper)/2)
+  {
+   if(arr[mid]==x)     
+    {                  // here mid is a position of array
+     flag++;           //arr[mid] is the element on that position
+     break;
+    }
+   else if(arr[mid]>x)
+	 upper=mid-1;
+   else
+	 lower=mid+1;
+  }
