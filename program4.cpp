@@ -11,3 +11,58 @@ struct Node
   struct Node *link;
 
 } *start,*p,*temp;
+
+//Declaring function
+void insert(int x);
+void pop();
+void search(int x);
+void count();
+void display();
+
+void main()
+{
+  int ch,n;
+  start = NULL;
+  clrscr();
+
+  //Menu driven
+  do
+  {
+   clrscr();
+   printf("\n\n\t\tEnter your choice :");
+   printf("\n\n\t\tPress 1 to insert ");
+   printf("\n\n\t\tPress 2 to delete");
+   printf("\n\n\t\tPress 3 to search");
+   printf("\n\n\t\tPress 4 to count");
+   printf("\n\n\t\tPress 5 to display");
+   scanf("%d",&ch);
+
+   switch(ch)
+   {
+     case 1: printf("\n Enter the value to insert");
+	           scanf("%d",&n);
+	           insert(n);
+	           break;
+
+     case 2: pop();
+	     break;
+
+     case 3: printf("Enter value to be search ");
+	     scanf("%d",&n);
+	     search(n);
+	     break;
+
+     case 4: count();
+	     break;
+
+     case 5: display();
+	     break;
+
+     default: printf("\nInvalid choice");
+
+   }
+   printf("\nPress 0 to continue...");
+   scanf("%d",&ch);
+
+  }while(ch==0);
+}
