@@ -66,3 +66,100 @@ void main()
 
   }while(ch==0);
 }
+
+//Insert operation
+ void insert(int x)
+ {
+   if(start==NULL)
+   {
+    start=(struct Node*)malloc(sizeof(struct Node));
+    start->link=NULL;
+    start->data=x;
+   }
+   else
+   {
+    p=start;
+    while(p->link!=NULL)
+	  p=p->link;
+
+    temp = (struct Node*)malloc(sizeof(struct Node));
+    p->link=temp;
+    temp->link=NULL;
+    temp->data=x;
+   }
+ }
+ //Delete operation
+ void pop()
+ {
+   if(start==NULL)
+    printf("\nNo List Present");
+
+   else if(start->link==NULL)
+   {
+     free(start);
+     printf("\n Node is deleted");
+     start = NULL;
+   }
+   else
+   {
+     p = start;
+     while(p->link->link!=NULL)
+      {
+	      p = p->link;
+      }
+      temp = p->link;
+      free(temp);
+      printf("\nNode is deleted");
+      p->link=NULL;
+   }
+ }
+
+ //Function for searching an element
+ void search(int x)
+ {
+   int flag = 0;
+
+   if(start==NULL)
+    {
+      printf("No list present...");
+    }
+   else
+    {
+      p = start;
+      while(p!=NULL)
+      {
+	      if(p->data==x)
+	      flag++;
+
+	      p = p->link;
+      }
+    }
+    if(flag)
+       printf("\nElement found %d number of times",flag);
+    else
+       printf("\nElement Not Found");
+ }
+
+ //Function for counting all element
+ void count()
+ {
+   int c = 0;
+
+   if(start==NULL)
+    {
+       count<<"No list present!";
+    }
+    else
+    {
+     p = start;
+
+      while(p!=NULL)
+       {
+	       c++;
+	       p = p->link;
+       }
+
+       printf("\nThe total no. of elements in the list is %d", c);
+    }
+    
+ }
