@@ -71,3 +71,28 @@ void main()
 
   }while(ch==0);
 }
+
+ //Insert function
+ void insert(int x)
+  {
+    if(start==NULL)
+    {
+      start = (struct Node*)malloc(sizeof(struct Node));
+      start->data = x;
+      start->link = start;
+    }
+    else
+    {
+      p = start;
+
+      while(p->link!=start)
+      {
+       p = p->link;
+      }
+      temp = (struct Node*)malloc(sizeof(struct Node));
+      p->link = temp;
+      temp->data = x;
+      temp->link = start;
+    }
+    printf("\nNode inserted\n");
+  }
