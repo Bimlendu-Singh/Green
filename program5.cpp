@@ -45,3 +45,14 @@ void main()
      for(k=0;k<3;k++)
       Z[i][j]=X[i][k]*Y[k][j]+Z[i][j];
    }
+
+   //Displaying finally matrix Z
+ printf("\n\n After multiplication Matrix Z is \n");
+  for(i=0;i<3;i++)
+   {                            
+    printf("\n\n");
+     for(j=0;j<3;j++)
+      printf(" %d ", Z[i][j]);
+   }
+   getch();
+}
