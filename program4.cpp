@@ -13,3 +13,8 @@ int main()
         {
          res = res*i;
         }
+        printf("\nFactorial is : %d",res);
+
+ 
+    return 0;
+}
