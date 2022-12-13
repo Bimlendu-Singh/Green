@@ -22,3 +22,11 @@ int main()
         num =  num*10 + x;
         n/=10;
     }
+    
+    //Display
+    printf("\nReverse of %d is %d\n", y,num);
+
+
+ 
+    return 0;
+}
