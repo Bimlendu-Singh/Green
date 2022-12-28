@@ -11,7 +11,7 @@ int main()
     scanf("%d",&n);
     y=n;  //Storing the value of 'n' to 'y' so we don't loose the original number
 
-    //Loop to count the digit of the given number
+    //Loop to count the digit of the given numbers
     for(i=n;i!=0;i/=10)
      count++;
 
