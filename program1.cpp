@@ -15,7 +15,7 @@ int main()
     for(i=n;i!=0;i/=10)
      count++;
 
-    //Loop to reverse the entered number
+    //Loop to reverse the input number 
     for(i=1;i<=count;i++)
     {
         x = n%10;
