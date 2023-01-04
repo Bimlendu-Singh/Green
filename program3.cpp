@@ -14,7 +14,7 @@ int main()
 
    printf("\nFibonnaci series till %dth term are : ",n);
 
-     
+   //Loop to print  
    for(i=1;i<=n;i++)
    {
       pos = i; 
