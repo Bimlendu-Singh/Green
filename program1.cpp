@@ -21,7 +21,7 @@ int main()
 
      for(i=1;i<pos-1;i++)
      {
-       res = new + prev;    //Here, 'new' and 'prev' variable to store last and 2nd last digit so we can add them and store result in 'res' variable
+       res = new + prev;    //Here 'new' and 'prev' variable to store last and 2nd last digit so we can add them and store result in 'res' variable
        prev = new;
        new = res; 
      }
