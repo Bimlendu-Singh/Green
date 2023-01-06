@@ -25,7 +25,7 @@ int main()
      }
     }
 
-   printf("\nAt position %d of the series is : %d\n",pos,res);
+   printf("\nAt position %d of the fibanci series is : %d\n",pos,res);
 
    return 0;
 
