@@ -1,6 +1,6 @@
 //Assignment7Qn1.c
 
-//1. Write a program to find the Nth term of the Fibonnaci series.
+//1. Write a program here to find the Nth term of the Fibonnaci series.
 
 #include<stdio.h>
 
@@ -21,7 +21,7 @@ int main()
 
      for(i=1;i<pos-1;i++)
      {
-       res = new + prev;    //Here, 'new' and 'prev' variable to store last and 2nd last digit so we can add them and store result in 'res' variable
+       res = new + prev;    //'new' and 'prev' variable to store last and 2nd last digit so we can add them and store result in 'res' variable
        prev = new;
        new = res; 
      }
