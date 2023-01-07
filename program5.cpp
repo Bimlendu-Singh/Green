@@ -1,7 +1,7 @@
 
 //1. Write a program to calculate sum of first N natural numbers
 
-#include<>
+#include<stdio.h>
 
 int main()
 {
