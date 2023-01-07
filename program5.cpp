@@ -14,6 +14,7 @@ int main()
     for(i=1;i<=x;i++)
     {
         sum = sum + i;
+        
     }
 
     printf("\nSum is : %d",sum);
