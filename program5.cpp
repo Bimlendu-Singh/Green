@@ -21,7 +21,7 @@ int main()
     if(count)
      printf("\nNumber given is not prime ");
      else
-      printf("\nNumber is prime ");    
+      printf("\nNumber given is prime ");    
 
     return 0;
 }
