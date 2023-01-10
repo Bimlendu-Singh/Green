@@ -1,4 +1,4 @@
-//8. Write a program to check whether a given number is a  number or not
+//8. Write a program to check whether a given number is a prime number or not
 
 #include<stdio.h>
 
