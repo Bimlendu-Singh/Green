@@ -8,3 +8,14 @@ int main()
 
     printf("\nEnter the required value of N to find sum : ");
     scanf("%d",&x);
+
+        for(i=1;i<=x;i++)
+    {
+        sum = sum + (2*i);
+    }
+
+    printf("\nSum is : %d",sum);
+
+ 
+    return 0;
+}
