@@ -23,3 +23,9 @@ int main()
        new = res; 
      }
     }s
+
+       printf("\nAt position %d of the Fibonnaci series is : %d\n",pos,res);
+
+   return 0;
+
+}
