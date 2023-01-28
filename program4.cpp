@@ -5,3 +5,9 @@
 #include<stdio.h>
 
 int main()
+{
+   int res = 1,pos,i,prev=0,new=1;
+
+   //Position input 
+   printf("\nEnter the position : ");
+   scanf("%d",&pos);
