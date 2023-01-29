@@ -5,3 +5,8 @@
 int main()
 {
     int n,i,x,y,count = 0,num=0;
+
+//Input
+    printf("\nEnter number : ");
+    scanf("%d",&n);
+    y=n;  //Storing the value of 'n' to 'y' so we don't loose the original number
