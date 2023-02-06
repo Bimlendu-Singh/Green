@@ -16,3 +16,7 @@ int main()
         }
 
      printf("\nFactorial is : %d",res);
+
+     
+    return 0;
+}
