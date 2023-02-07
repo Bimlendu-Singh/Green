@@ -5,3 +5,6 @@
 int main()
 {
     int x,sum=0,i;
+
+    printf("\nEnter the required value of N to find sum : ");
+    scanf("%d",&x);
