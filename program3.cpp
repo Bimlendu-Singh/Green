@@ -41,3 +41,20 @@ int main()
            new = res; 
          }
         }
+
+         //It will match the input to the finoacci number when it matches , it will come out of the loop
+        if(res==x)
+        {
+            flag++;
+            break;
+        }
+   }
+
+   if(flag)
+    printf("\n%d is in fibonacci series \n",x);
+   else
+    printf("\n%d is NOT in fibonacci series \n",x);
+
+   return 0;
+
+}
