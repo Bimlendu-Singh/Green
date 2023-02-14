@@ -15,3 +15,6 @@ printf("\nEnter the required value of N to find sum : ");
     }
 
     printf("\nSum is : %d",sum);
+
+return 0;
+}
