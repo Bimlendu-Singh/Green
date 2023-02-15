@@ -13,3 +13,8 @@ int main()
     {
         sum = sum + i;
     }
+    printf("\nSum is : %d",sum);
+
+ 
+    return 0;
+}
