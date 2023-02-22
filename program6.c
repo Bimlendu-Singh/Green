@@ -34,3 +34,12 @@ int main()
       sum = sum + res;
       x = x/10;
      }
+
+      //Printing armstrong number only
+     if(sum==i)
+      printf(" %d ",sum);
+   } 
+
+   return 0;
+
+}
