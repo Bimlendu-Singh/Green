@@ -14,3 +14,23 @@ int main()
      x = i;
      count = 0;
      sum = 0;
+
+      //Loop counting number of digits in the given number
+     while(x!=0)
+     {
+      count++;
+      x = x/10;
+     }
+     x = i;  //restoring original value of x
+
+    //Loop to check whether the 'i' is armstrong number or not.
+     for(j=1;j<=count;j++)
+     {
+      res = 1;
+      rem = x%10;
+      for(k=1;k<=count;k++)
+       res = res*rem;
+
+      sum = sum + res;
+      x = x/10;
+     }
