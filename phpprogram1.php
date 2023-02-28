@@ -12,3 +12,11 @@ if (($num%$i)==0)
 $div_count++;  
 }  
 }  
+if ($div_count<3)  
+{  
+echo $num." , ";  
+$count=$count+1;  
+}  
+$num=$num+1;  
+}  
+?> 
