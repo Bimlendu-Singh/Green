@@ -6,3 +6,6 @@
    <br>
    $wealth = "destiny";
     <br>
+    echo "Real wealth is $wealth";
+
+?>
