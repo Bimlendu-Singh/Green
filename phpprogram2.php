@@ -12,3 +12,8 @@ if($num==$total)
 {  
 echo "Yes it is an Armstrong number";  
 } 
+else  
+{  
+echo "No it is not an armstrong number";  
+}  
+?>  
