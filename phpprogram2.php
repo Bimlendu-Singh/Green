@@ -8,3 +8,7 @@ $rem=$x%10;
 $total=$total+$rem*$rem*$rem;  
 $x=$x/10;  
 }  
+if($num==$total)  
+{  
+echo "Yes it is an Armstrong number";  
+} 
