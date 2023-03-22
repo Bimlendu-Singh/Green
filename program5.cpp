@@ -10,3 +10,7 @@ int main()
     printf("\nEnter number : ");
     scanf("%d",&n);
     y=n;  //Storing the value of 'n' to 'y' so we don't loose the original number
+
+     //Loop to count the digit of the given number
+    for(i=n;i!=0;i/=10)
+     count++;
