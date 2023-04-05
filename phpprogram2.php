@@ -1,3 +1,5 @@
 <?php
  
    echo "Let's start something exciting!";
+   <br>
+   $wealth = "destiny";
