@@ -14,3 +14,11 @@ int main()
      x = i;
      count = 0;
      sum = 0;
+
+     //Loop counting number of digits in the given number
+     while(x!=0)
+     {
+      count++;
+      x = x/10;
+     }
+     x = i;  //restoring original value of x
