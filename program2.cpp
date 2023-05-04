@@ -13,3 +13,9 @@ int main()
     {
         sum = sum + (2*i);
     }
+
+ printf("\nSum is : %d",sum);
+
+ 
+    return 0;
+}
