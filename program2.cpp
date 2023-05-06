@@ -22,3 +22,15 @@ for(i=x+1;;i++)
             break;
           }
         }
+
+        if(count==0)
+        {
+            printf("\nNext prime number is : %d",i);
+            break;
+        }
+          
+    }
+
+   return 0;
+
+}
