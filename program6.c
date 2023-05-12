@@ -13,3 +13,9 @@ printf("\nEnter the required value of N to find sum : ");
     {
         sum = sum + (2*i);
     }
+
+      printf("\nSum is : %d",sum);
+
+ 
+    return 0;
+}
