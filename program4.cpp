@@ -17,3 +17,11 @@ int main()
           break;
         }
     }
+
+       if(count)
+     printf("\nNumber is not prime ");
+     else
+      printf("\nNumber is prime ");    
+
+    return 0;
+}
