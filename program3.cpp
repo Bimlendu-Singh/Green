@@ -17,3 +17,11 @@ for(i=2;i<=x/2;i++)
           break;
         }
     }
+
+if(count)
+     printf("\nNumber is not prime ");
+     else
+      printf("\nNumber is prime ");    
+
+    return 0;
+}
