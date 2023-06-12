@@ -5,3 +5,11 @@
 int main()
 {
     int x,res=1,i;
+
+ printf("\nEnter number to find its factorial : ");
+    scanf("%d",&x);
+
+        for(i=1;i<=x;i++)
+        {
+         res = res*i;
+        }
