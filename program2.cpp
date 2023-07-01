@@ -43,3 +43,12 @@ int main()
             break;
         }
    }
+
+    if(flag)
+    printf("\n%d is in fibonacci series \n",x);
+   else
+    printf("\n%d is NOT in fibonacci series \n",x);
+
+   return 0;
+
+}
