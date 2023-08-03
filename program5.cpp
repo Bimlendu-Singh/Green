@@ -13,3 +13,9 @@ printf("\nEnter number to find its factorial : ");
         {
          res = res*i;
         }
+
+printf("\nFactorial is : %d",res);
+
+ 
+    return 0;
+}
