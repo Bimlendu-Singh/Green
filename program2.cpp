@@ -23,3 +23,15 @@ printf("\nEnter a number to find next prime number from that number : ");
             break;
           }
         }
+
+        if(count==0)
+        {
+            printf("\nNext prime number is : %d",i);
+            break;
+        }
+          
+    }
+
+   return 0;
+
+}
